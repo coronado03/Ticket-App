@@ -8,10 +8,10 @@ const app = express();
 
 
 app.get('/', (req: Request, res: Response) => {
-    res.json({test1: 'First test', test2: 'Second Test'})
+    res.json({test1: 'First test', test2: 'Second Test'});
 })
 
 //Here we'll have our routes
-app.use('/api/users', require('./routes/userRoutes'))
+app.use('/api/users', require('./routes/userRoutes'));
 
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
